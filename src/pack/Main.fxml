@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="finaldbbuttoon" prefHeight="605.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.Maincontroller">
+   <children>
+      <Label fx:id="lab1" layoutX="425.0" layoutY="331.0" text="predicted x value" />
+      <Button fx:id="butt1id" layoutX="243.0" layoutY="327.0" mnemonicParsing="false" onAction="#predict" text="predict y value" />
+      <TextField fx:id="tf" layoutX="48.0" layoutY="327.0" promptText="enter x value" />
+      <ListView fx:id="lstview" layoutX="519.0" layoutY="43.0" prefHeight="200.0" prefWidth="52.0" />
+      <Button fx:id="loadchart" layoutX="184.0" layoutY="268.0" mnemonicParsing="false" text="Show Graph" />
+      <LineChart fx:id="linechart" layoutX="48.0" layoutY="14.0" prefHeight="246.0" prefWidth="313.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <ListView fx:id="lstview2" layoutX="413.0" layoutY="43.0" prefHeight="200.0" prefWidth="52.0" />
+      <Button fx:id="butt2" layoutX="422.0" layoutY="268.0" mnemonicParsing="false" text="output intermediate data" />
+      <Label layoutX="418.0" layoutY="18.0" text="x values" />
+      <Label layoutX="524.0" layoutY="18.0" text="y values" />
+      <TextArea fx:id="intmed" layoutX="35.0" layoutY="375.0" prefHeight="200.0" prefWidth="274.0" />
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="337.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@regressimage.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="dbvalues" layoutX="686.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0" promptText="database x y values" />
+      <Label layoutX="695.0" layoutY="18.0" text="x and y values from the database" />
+      <Button fx:id="dbbutton" layoutX="679.0" layoutY="268.0" mnemonicParsing="false" onAction="#getdbvalues" text="get db values" />
+      <Button fx:id="finaldbbutton" layoutX="786.0" layoutY="268.0" mnemonicParsing="false" onAction="#swapdbvalues" text="swap for db values" />
+   </children>
+</AnchorPane>
